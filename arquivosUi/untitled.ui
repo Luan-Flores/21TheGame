@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>896</width>
-    <height>695</height>
+    <width>1333</width>
+    <height>849</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,15 +19,15 @@
      <rect>
       <x>0</x>
       <y>-10</y>
-      <width>901</width>
-      <height>691</height>
+      <width>1341</width>
+      <height>821</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Como-jogar-blackjack-.png</pixmap>
+     <pixmap>../imagens/Como-jogar-blackjack-.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -55,8 +55,8 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>490</y>
+      <x>80</x>
+      <y>600</y>
       <width>191</width>
       <height>81</height>
      </rect>
@@ -90,7 +90,7 @@ border-radius:20px;</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>896</width>
+     <width>1333</width>
      <height>21</height>
     </rect>
    </property>

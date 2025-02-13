@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>Apresentação de Slides Corporativo Preto e Amarelo (1).jpg</pixmap>
+     <pixmap>../imagens/Apresentação de Slides Corporativo Preto e Amarelo (1).jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -46,7 +46,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/2C.png</pixmap>
+     <pixmap>../baralhos/4C.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -65,7 +65,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/4E.png</pixmap>
+     <pixmap>../baralhos/2P.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -84,7 +84,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/7C.png</pixmap>
+     <pixmap>../baralhos/5C.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -103,7 +103,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/AOu.png</pixmap>
+     <pixmap>../baralhos/KOu.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -122,7 +122,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/KE.png</pixmap>
+     <pixmap>../baralhos/AC.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -141,7 +141,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/10P.png</pixmap>
+     <pixmap>../baralhos/5E.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -160,7 +160,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>baralhos/JC.png</pixmap>
+     <pixmap>../baralhos/JE.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -204,7 +204,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>maozinha.png</pixmap>
+     <pixmap>../imagens/maozinha.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
