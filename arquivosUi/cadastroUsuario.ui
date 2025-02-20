@@ -322,7 +322,6 @@ background: rgba(255, 250, 250, 0.9);</string>
     </property>
    </widget>
    <zorder>label_3</zorder>
-   <zorder>pushButtonVoltar</zorder>
    <zorder>label</zorder>
    <zorder>lineEditTelefone</zorder>
    <zorder>lineEditEmail</zorder>
@@ -330,10 +329,11 @@ background: rgba(255, 250, 250, 0.9);</string>
    <zorder>labelDataNascimento</zorder>
    <zorder>labelEmail</zorder>
    <zorder>labelTelefone</zorder>
-   <zorder>pushButtonEnviar</zorder>
    <zorder>lineEditNome</zorder>
    <zorder>labelEmail_2</zorder>
    <zorder>labelDescricao</zorder>
+   <zorder>pushButtonVoltar</zorder>
+   <zorder>pushButtonEnviar</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
