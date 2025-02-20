@@ -1,6 +1,6 @@
 import sys
 import random
-<<<<<<<< HEAD:code/main.py
+
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QLabel, QVBoxLayout, QMessageBox
 from gameScreen import Ui_MainWindow
@@ -47,8 +47,6 @@ class Blackjack(QMainWindow):
     #     self.layout.addWidget(self.btn_parar)
 
     #     self.setLayout(self.layout)
-========
-from PyQt5.QtWidgets import QApplication, QWidget, QPushButton, QLabel, QVBoxLayout, QMessageBox
 
 class Blackjack(QWidget):
     def __init__(self):
@@ -80,7 +78,6 @@ class Blackjack(QWidget):
         self.layout.addWidget(self.btn_parar)
 
         self.setLayout(self.layout)
->>>>>>>> a541626c55f157e2820e0ddd630f06d476b34219:arquivosPython/main2.py
 
     def criar_baralho(self):
         naipes = ['Copas', 'Ouros', 'Espadas', 'Paus']
@@ -110,13 +107,13 @@ class Blackjack(QWidget):
     def exibir_mao(self):
         mao_jogador_str = ', '.join([f"{valor} de {naipe}" for valor, naipe in self.mao_jogador])
         mao_dealer_str = ', '.join([f"{valor} de {naipe}" for valor, naipe in self.mao_dealer])
-<<<<<<<< HEAD:code/main.py
+
         self.ui.labelJogador.setText(f'Mão do Jogador: {mao_jogador_str} (Valor: {self.calcular_valor_mao(self.mao_jogador)})')
         self.ui.labelDealer.setText(f'Mão do Dealer: {mao_dealer_str} (Valor: {self.calcular_valor_mao(self.mao_dealer)})')
-========
+
         self.label_jogador.setText(f'Mão do Jogador: {mao_jogador_str} (Valor: {self.calcular_valor_mao(self.mao_jogador)})')
         self.label_dealer.setText(f'Mão do Dealer: {mao_dealer_str} (Valor: {self.calcular_valor_mao(self.mao_dealer)})')
->>>>>>>> a541626c55f157e2820e0ddd630f06d476b34219:arquivosPython/main2.py
+
 
     def iniciar_jogo(self):
         self.mao_jogador = [self.baralho.pop(), self.baralho.pop()]
@@ -148,11 +145,8 @@ class Blackjack(QWidget):
         
         self.iniciar_jogo()  # Reinicia o jogo após o resultado
 
-<<<<<<<< HEAD:code/main.py
-    
-        
-========
->>>>>>>> a541626c55f157e2820e0ddd630f06d476b34219:arquivosPython/main2.py
+
+
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     jogo = Blackjack()
