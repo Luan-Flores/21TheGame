@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../imagens/Apresentação de Slides Corporativo Preto e Amarelo (2).jpg</pixmap>
+     <pixmap>../imagens/fundoJogo.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -37,9 +37,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>460</y>
+      <y>470</y>
       <width>141</width>
-      <height>231</height>
+      <height>221</height>
      </rect>
     </property>
     <property name="text">
@@ -103,7 +103,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../baralhos/KOu.png</pixmap>
+     <pixmap>../baralhos/6O.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -160,7 +160,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../baralhos/JE.png</pixmap>
+     <pixmap>../baralhos/3O.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -416,7 +416,7 @@ border-radius:20px;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../PROJETO JOGO 21/unnamed.png</pixmap>
+     <pixmap>../imagens/unnamed.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
