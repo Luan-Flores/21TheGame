@@ -42,17 +42,23 @@
       <height>231</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
      <string/>
     </property>
+    <property name="textFormat">
+     <enum>Qt::RichText</enum>
+    </property>
     <property name="pixmap">
-     <pixmap>baralhos/4C.png</pixmap>
+     <pixmap>../baralhos/cartaFUNDO.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="labelCartas">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -128,7 +134,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>980</x>
@@ -147,7 +153,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="labelCarta_2">
     <property name="geometry">
      <rect>
       <x>1170</x>
@@ -155,6 +161,10 @@
       <width>141</width>
       <height>221</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+</string>
     </property>
     <property name="text">
      <string/>
@@ -169,9 +179,9 @@
    <widget class="QLabel" name="label_9">
     <property name="geometry">
      <rect>
-      <x>480</x>
+      <x>470</x>
       <y>340</y>
-      <width>391</width>
+      <width>441</width>
       <height>141</height>
      </rect>
     </property>
@@ -182,10 +192,12 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">color:#ffffff;</string>
+     <string notr="true">background-color: rgb(170, 0, 0);
+
+</string>
     </property>
     <property name="text">
-     <string>CLICK PARA COMPRAR</string>
+     <string>CLIQUE PARA COMPRAR</string>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
