@@ -97,7 +97,7 @@ border-radius:20px;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../PROJETO JOGO 21/unnamed.png</pixmap>
+     <pixmap>../imagens/unnamed.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
