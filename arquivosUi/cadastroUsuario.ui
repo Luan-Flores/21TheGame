@@ -275,7 +275,7 @@ border: 1px solid #ccc;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../imagens/Como-jogar-blackjack-.png</pixmap>
+     <pixmap>../imagens/mesaFundo.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>

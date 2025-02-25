@@ -27,17 +27,17 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../imagens/Como-jogar-blackjack-.jpg</pixmap>
+     <pixmap>../imagens/mesaMaisClara.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="labelTitulo1">
     <property name="geometry">
      <rect>
       <x>360</x>
-      <y>0</y>
+      <y>3</y>
       <width>651</width>
       <height>51</height>
      </rect>
@@ -51,18 +51,18 @@
      <string>Como jogar 21 no baralho: Regras e Objetivos</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="labelTexto1">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>30</y>
+      <y>40</y>
       <width>831</width>
-      <height>151</height>
+      <height>111</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -72,7 +72,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="labelTitulo2">
     <property name="geometry">
      <rect>
       <x>590</x>
@@ -90,18 +90,18 @@
      <string>Introdução</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="labelTexto2">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>180</y>
+      <y>194</y>
       <width>831</width>
-      <height>141</height>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -112,13 +112,13 @@ Com o tempo, foram-se criando outras formas de jogar até que chegamos ao 21, qu
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="labelTitulo3">
     <property name="geometry">
      <rect>
       <x>540</x>
-      <y>290</y>
+      <y>292</y>
       <width>251</width>
-      <height>61</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="font">
@@ -130,18 +130,18 @@ Com o tempo, foram-se criando outras formas de jogar até que chegamos ao 21, qu
      <string>Valores das cartas</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="labelTexto3">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>340</y>
-      <width>841</width>
-      <height>91</height>
+      <x>260</x>
+      <y>320</y>
+      <width>831</width>
+      <height>71</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -151,11 +151,11 @@ Com o tempo, foram-se criando outras formas de jogar até que chegamos ao 21, qu
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="labelTitulo4">
     <property name="geometry">
      <rect>
       <x>490</x>
-      <y>420</y>
+      <y>399</y>
       <width>371</width>
       <height>51</height>
      </rect>
@@ -169,18 +169,18 @@ Com o tempo, foram-se criando outras formas de jogar até que chegamos ao 21, qu
      <string>Como jogar 21 (Blackjack)</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_9">
+   <widget class="QLabel" name="labelTexto4">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>470</y>
-      <width>821</width>
-      <height>221</height>
+      <x>260</x>
+      <y>440</y>
+      <width>831</width>
+      <height>231</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -193,11 +193,11 @@ O termo Blackjack se refere à melhor mão inicial que você poderá ter no jogo
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_10">
+   <widget class="QLabel" name="labelTitulo5">
     <property name="geometry">
      <rect>
       <x>600</x>
-      <y>680</y>
+      <y>672</y>
       <width>141</width>
       <height>41</height>
      </rect>
@@ -211,18 +211,18 @@ O termo Blackjack se refere à melhor mão inicial que você poderá ter no jogo
      <string>Conclusão</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_11">
+   <widget class="QLabel" name="labelTexto5">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>720</y>
-      <width>821</width>
-      <height>81</height>
+      <x>260</x>
+      <y>700</y>
+      <width>831</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>12</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="text">
@@ -237,15 +237,15 @@ Obrigado a você que chegou até aqui e não deixe de passar na nossa seção de
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>700</y>
-      <width>191</width>
-      <height>81</height>
+      <y>10</y>
+      <width>131</width>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Consolas</family>
-      <pointsize>29</pointsize>
+      <pointsize>25</pointsize>
       <weight>75</weight>
       <italic>false</italic>
       <bold>true</bold>
@@ -263,25 +263,6 @@ border-radius:20px;</string>
     </property>
     <property name="text">
      <string>Voltar</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_12">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>121</width>
-      <height>121</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="pixmap">
-     <pixmap>../../../PROJETO JOGO 21/unnamed.png</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
     </property>
    </widget>
   </widget>

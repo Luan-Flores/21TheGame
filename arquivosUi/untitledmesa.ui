@@ -27,7 +27,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../imagens/fundoJogo.jpg</pixmap>
+     <pixmap>../imagens/mesaECartas.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -416,7 +416,7 @@ border-radius:20px;</string>
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../imagens/unnamed.png</pixmap>
+     <pixmap>../imagens/logo21.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
