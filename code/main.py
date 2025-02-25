@@ -18,11 +18,14 @@ class Blackjack(QMainWindow):
         self.ui.btnComprar.clicked.connect(self.comprar)
         self.ui.btnParar.clicked.connect(self.parar)
         self.c2 = '../baralhos/2C.png'
-        self.ui.labelCarta.setPixmap(QPixmap(self.c2))
-        self.str1 = "Alucina"
-        self.str2 = "Não faz mal"
-        self.stingConc = self.str1 + self.str2 + ".png"
-        print(self.stingConc)
+        self.ui.labelCarta1.setPixmap(QPixmap(self.c2))
+        self.carta1 = self.ui.labelCarta1
+        self.carta2 = self.ui.labelCarta2
+        self.carta3 = self.ui.labelCarta3
+        self.carta4 = self.ui.labelCarta4
+        self.carta5 = self.ui.labelCarta5
+        self.carta6 = self.ui.labelCarta6
+        self.carta7 = self.ui.labelCarta7
 
         # Diretório onde as imagens das cartas estão armazenadas
         caminho_baralho = "../baralhos"
@@ -44,6 +47,7 @@ class Blackjack(QMainWindow):
         naipes = ['Copas', 'Ouros', 'Espadas', 'Paus']
         valores = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valete', 'Dama', 'Rei', 'As']
         baralho = [(valor, naipe) for valor in valores for naipe in naipes]
+        baralhoImg = [self.carta1,self.carta2,self.carta3,self.carta4,self.carta5,self.carta6,self.carta7]
         random.shuffle(baralho)
         return baralho
 
@@ -83,7 +87,7 @@ class Blackjack(QMainWindow):
     
     def addImgCarta(self, carta):
         caminho_imagem = f"../baralhos/{carta}.png"
-        self.ui.labelCarta.setPixmap(QPixmap(caminho_imagem))
+        self.ui.labelCarta1.setPixmap(QPixmap(caminho_imagem))
     
     def getFirstLetter(self,carta):
         valor = str(carta[0][0])
@@ -96,7 +100,7 @@ class Blackjack(QMainWindow):
         carta_comprada = self.baralho.pop()  # Remove a carta do baralho e armazena
         self.mao_jogador.append(carta_comprada)  # Adiciona à mão do jogador
         self.addImgCarta(self.getFirstLetter(carta_comprada))
-
+        
         print(carta_comprada)  # Agora imprime a carta correta
         print(self.mao_jogador)  # Exibe a mão do jogador corretamente
 

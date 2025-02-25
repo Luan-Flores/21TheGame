@@ -27,13 +27,13 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>imagens/Apresentação de Slides Corporativo Preto e Amarelo (2).jpg</pixmap>
+     <pixmap>../imagens/fundoJogo.jpg</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="labelCarta">
+   <widget class="QLabel" name="labelCarta1">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -58,7 +58,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="labelCartas">
+   <widget class="QLabel" name="labelCarta2">
     <property name="geometry">
      <rect>
       <x>220</x>
@@ -77,7 +77,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_4">
+   <widget class="QLabel" name="labelCarta3">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -96,7 +96,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="labelCarta4">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -115,7 +115,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="labelCarta5">
     <property name="geometry">
      <rect>
       <x>790</x>
@@ -134,7 +134,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelCarta6">
     <property name="geometry">
      <rect>
       <x>980</x>
@@ -153,7 +153,7 @@
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="labelCarta_2">
+   <widget class="QLabel" name="labelCarta7">
     <property name="geometry">
      <rect>
       <x>1170</x>
@@ -163,8 +163,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">
-</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string/>
