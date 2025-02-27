@@ -1,0 +1,36 @@
+BOTÃO:
+
+TELA INICIAL 
+
+JOGAR = pushButton
+CADASTRAR = pushButton_2
+COMO JOGAR = pushButton_3
+SAIR = pushButton_4 
+
+------------------------------------------
+
+TELA MESA DO JOGO 
+
+BOTÃO : 
+
+HOME = pushButton_2
+PERFIL = pushButton_3
+COMO JOGAR = pushButton_5
+SAIR = pushButton_4
+
+LABEL :
+ 
+CLICK PARA COMPRAR (ICONE MAOZINHA AMARELA ) = label_10
+
+PRIMEIRA CARTA = label
+SEGUNDA CARTA = label_3
+TERCEIRA CARTA = label_4
+QUARTA CARTA = label_5
+QUINTA CARTA = label_6
+SEXTA CARTA =label_7
+SETIMA CARTA = label_8
+
+RESULTADO DA SOMA AQUI = label_14
+RESULTADO DO SEU SCORE = label_15
+
+------------------------------------------------------
