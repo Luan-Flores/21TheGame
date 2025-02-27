@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1346</width>
-    <height>853</height>
+    <height>885</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,8 +28,8 @@
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>12</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -51,8 +51,8 @@ backdrop-filter: blur(10.8px);</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>11</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -75,8 +75,8 @@ border: 1px solid #ccc;</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>10</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -97,8 +97,8 @@ border: 1px solid #ccc;</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>10</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -114,16 +114,16 @@ border: 1px solid #ccc;</string>
    <widget class="QLabel" name="labelDescricao">
     <property name="geometry">
      <rect>
-      <x>530</x>
+      <x>520</x>
       <y>70</y>
-      <width>281</width>
+      <width>291</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>20</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>24</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -147,8 +147,8 @@ box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>12</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -170,8 +170,8 @@ backdrop-filter: blur(10.8px);</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>10</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>11</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -195,8 +195,8 @@ border: 1px solid #ccc;</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>11</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -219,8 +219,8 @@ border: 1px solid #ccc;</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>12</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -242,8 +242,8 @@ backdrop-filter: blur(10.8px);</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>10</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -261,8 +261,8 @@ border: 1px solid #ccc;</string>
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1341</width>
-      <height>811</height>
+      <width>1440</width>
+      <height>900</height>
      </rect>
     </property>
     <property name="contextMenuPolicy">
@@ -292,8 +292,8 @@ border: 1px solid #ccc;</string>
     </property>
     <property name="font">
      <font>
-      <family>Verdana</family>
-      <pointsize>12</pointsize>
+      <family>MS Shell Dlg 2</family>
+      <pointsize>14</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -321,6 +321,38 @@ background: rgba(255, 250, 250, 0.9);</string>
      <string/>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButtonVoltar_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>25</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#0ba4eb;
+color:#ffffff;
+border-radius:20px;</string>
+    </property>
+    <property name="text">
+     <string>Voltar</string>
+    </property>
+   </widget>
    <zorder>label_3</zorder>
    <zorder>label</zorder>
    <zorder>lineEditTelefone</zorder>
@@ -334,6 +366,7 @@ background: rgba(255, 250, 250, 0.9);</string>
    <zorder>labelDescricao</zorder>
    <zorder>pushButtonVoltar</zorder>
    <zorder>pushButtonEnviar</zorder>
+   <zorder>pushButtonVoltar_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
