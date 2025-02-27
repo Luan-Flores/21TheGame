@@ -108,7 +108,7 @@ border-radius: 8px;
 border: 1px solid #ccc;</string>
     </property>
     <property name="text">
-     <string>67 99160-9526</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="labelDescricao">
@@ -181,7 +181,7 @@ border-radius: 8px;
 border: 1px solid #ccc;</string>
     </property>
     <property name="text">
-     <string>Kauã Miguel Oliveira dos Santos </string>
+     <string/>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButtonVoltar">
@@ -253,7 +253,7 @@ border-radius: 8px;
 border: 1px solid #ccc;</string>
     </property>
     <property name="text">
-     <string>kaua.santos@gmail.com</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -281,7 +281,7 @@ border: 1px solid #ccc;</string>
      <bool>true</bool>
     </property>
    </widget>
-   <widget class="QLabel" name="labelEmail_2">
+   <widget class="QLabel" name="labelNome">
     <property name="geometry">
      <rect>
       <x>490</x>
@@ -304,7 +304,7 @@ backdrop-filter: blur(10.8px);</string>
      <string>Nome:</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="labelFundoClaro">
     <property name="geometry">
      <rect>
       <x>440</x>
@@ -321,40 +321,8 @@ background: rgba(255, 250, 250, 0.9);</string>
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButtonVoltar_2">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>10</y>
-      <width>131</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Consolas</family>
-      <pointsize>25</pointsize>
-      <weight>75</weight>
-      <italic>false</italic>
-      <bold>true</bold>
-      <strikeout>false</strikeout>
-      <kerning>false</kerning>
-     </font>
-    </property>
-    <property name="autoFillBackground">
-     <bool>false</bool>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color:#0ba4eb;
-color:#ffffff;
-border-radius:20px;</string>
-    </property>
-    <property name="text">
-     <string>Voltar</string>
-    </property>
-   </widget>
    <zorder>label_3</zorder>
-   <zorder>label</zorder>
+   <zorder>labelFundoClaro</zorder>
    <zorder>lineEditTelefone</zorder>
    <zorder>lineEditEmail</zorder>
    <zorder>dateEditDataNascimento</zorder>
@@ -362,11 +330,10 @@ border-radius:20px;</string>
    <zorder>labelEmail</zorder>
    <zorder>labelTelefone</zorder>
    <zorder>lineEditNome</zorder>
-   <zorder>labelEmail_2</zorder>
+   <zorder>labelNome</zorder>
    <zorder>labelDescricao</zorder>
    <zorder>pushButtonVoltar</zorder>
    <zorder>pushButtonEnviar</zorder>
-   <zorder>pushButtonVoltar_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
