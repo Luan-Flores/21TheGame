@@ -1,6 +1,8 @@
-import sys, os, random
+import sys
+import os
+import random
 from PyQt5.QtGui import QPixmap
-from PyQt5.QtWidgets import QApplication, QMainWindow, QWidget, QPushButton, QLabel, QVBoxLayout, QMessageBox
+from PyQt5.QtWidgets import QApplication, QMainWindow, QMessageBox
 from gameScreen import Ui_MainWindow
 
 class Blackjack(QMainWindow):
@@ -8,17 +10,8 @@ class Blackjack(QMainWindow):
         super().__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-        
-        self.baralho = self.criar_baralho()
-        self.mao_jogador = []
-        self.mao_dealer = []
-        self.iniciar_jogo()
-        # self.jogar = QPushButton('jogar')
-        # self.jogar.clicked.connect(self.iniciar_jogo())
-        self.ui.btnComprar.clicked.connect(self.comprar)
-        self.ui.btnParar.clicked.connect(self.parar)
-        self.c2 = '../baralhos/2C.png'
-        self.ui.labelCarta1.setPixmap(QPixmap(self.c2))
+
+        # Inicializa as cartas após a configuração da interface
         self.carta1 = self.ui.labelCarta1
         self.carta2 = self.ui.labelCarta2
         self.carta3 = self.ui.labelCarta3
@@ -26,28 +19,33 @@ class Blackjack(QMainWindow):
         self.carta5 = self.ui.labelCarta5
         self.carta6 = self.ui.labelCarta6
         self.carta7 = self.ui.labelCarta7
+        self.cartasArray = ['self.carta1', 'self.carta2', 'self.carta3', 'self.carta4', 'self.carta5', 'self.carta6', 'self.carta7']
+
+
+        self.baralho = self.criar_baralho()
+        self.mao_jogador = []
+        self.mao_dealer = []
+        self.iniciar_jogo()
+
+        self.ui.btnComprar.clicked.connect(self.comprar)
+        self.ui.btnParar.clicked.connect(self.parar)
 
         # Diretório onde as imagens das cartas estão armazenadas
-        caminho_baralho = "../baralhos"
+        self.caminho_baralho = "../baralhos"
+        self.cartas = self.carregar_cartas()
 
-        # Criar um dicionário para armazenar as cartas
+    def carregar_cartas(self):
         cartas = {}
-
-        # Percorrer os arquivos na pasta
-        for arquivo in os.listdir(caminho_baralho):
-            if arquivo.endswith(".png"):                   # Certifique-se de carregar apenas imagens
-                nome_carta = os.path.splitext(arquivo)[0]  # Remove a extensão (.png)
-                cartas[nome_carta] = os.path.join(caminho_baralho, arquivo)
-
-        # Exemplo de acesso a uma carta específica
-        print(cartas["2C"])  # Saída: ../baralhos/2C.png
-
+        for arquivo in os.listdir(self.caminho_baralho):
+            if arquivo.endswith(".png"):
+                nome_carta = os.path.splitext(arquivo)[0]
+                cartas[nome_carta] = os.path.join(self.caminho_baralho, arquivo)
+        return cartas
 
     def criar_baralho(self):
         naipes = ['Copas', 'Ouros', 'Espadas', 'Paus']
         valores = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Valete', 'Dama', 'Rei', 'As']
         baralho = [(valor, naipe) for valor in valores for naipe in naipes]
-        baralhoImg = [self.carta1,self.carta2,self.carta3,self.carta4,self.carta5,self.carta6,self.carta7]
         random.shuffle(baralho)
         return baralho
 
@@ -76,37 +74,54 @@ class Blackjack(QMainWindow):
         self.ui.labelDealer.setText(f'Mão do Dealer: {mao_dealer_str} (Valor: {self.calcular_valor_mao(self.mao_dealer)})')
 
     def iniciar_jogo(self):
-        """Distribui as cartas iniciais e reembaralha caso necessário"""
-        if len(self.baralho) < 4:  # Verifica se há cartas suficientes no baralho
-            self.baralho = self.criar_baralho()  # Recria e embaralha o baralho
+        if len(self.baralho) < 4:
+            self.baralho = self.criar_baralho()
         
         self.mao_jogador = [self.baralho.pop(), self.baralho.pop()]
         self.mao_dealer = [self.baralho.pop(), self.baralho.pop()]
         
         self.exibir_mao()
-    
-    def addImgCarta(self, carta):
+
+    def addImgCarta(self, carta, local):
         caminho_imagem = f"../baralhos/{carta}.png"
-        self.ui.labelCarta1.setPixmap(QPixmap(caminho_imagem))
-    
-    def getFirstLetter(self,carta):
+        # Usa getattr para acessar o atributo dinamicamente
+        getattr(self.ui, local).setPixmap(QPixmap(caminho_imagem))
+
+    def clearResult(self):
+        caminho_imagem = f"../baralhos/cartaFUNDO.png"
+        # Usa getattr para acessar o atributo dinamicamente
+        for carta in self.cartasArray:
+            # Aqui, carta deve ser uma string
+            label = getattr(self.ui, carta)  # Acessa o QLabel
+            if isinstance(label, QLabel):  # Verifica se é um QLabel
+                label.setPixmap(QPixmap(caminho_imagem))
+            else:
+                print(f"Erro: {carta} não é um QLabel.")
+            print(carta)
+
+    def getFirstLetter(self, carta):
         valor = str(carta[0][0])
         naipe = str(carta[1][0])
-        print(valor, naipe)
-        cartaFull = str(valor+naipe)
-        return cartaFull        
-    
+        cartaFull = str(valor + naipe)
+        return cartaFull
+
     def comprar(self):
-        carta_comprada = self.baralho.pop()  # Remove a carta do baralho e armazena
-        self.mao_jogador.append(carta_comprada)  # Adiciona à mão do jogador
-        self.addImgCarta(self.getFirstLetter(carta_comprada))
-        
-        print(carta_comprada)  # Agora imprime a carta correta
-        print(self.mao_jogador)  # Exibe a mão do jogador corretamente
+        carta_comprada = self.baralho.pop()
+        self.mao_jogador.append(carta_comprada)
+
+        # Atualiza a imagem da carta comprada
+        for i in range(len(self.mao_jogador)):
+            # Garante que o índice não ultrapasse o número de cartas disponíveis
+            if i < len(self.cartasArray):
+                local = f'labelCarta{i + 1}'  # labelCarta1, labelCarta2, etc.
+                self.addImgCarta(self.getFirstLetter(self.mao_jogador[i]), local)
+
+        print(f"AAAAAAA {self.mao_jogador}")
 
         if self.calcular_valor_mao(self.mao_jogador) > 21:
             self.exibir_mao()
             QMessageBox.information(self, 'Resultado', 'Você estourou! O dealer ganhou.')
+            self.clearResult()
             self.iniciar_jogo()
         else:
             self.exibir_mao()
@@ -125,10 +140,8 @@ class Blackjack(QMainWindow):
         else:
             QMessageBox.information(self, 'Resultado', 'Empate!')
         
-        self.iniciar_jogo()  # Reinicia o jogo após o resultado
+        self.iniciar_jogo()
 
-    
-        
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     jogo = Blackjack()
