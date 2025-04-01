@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1346</width>
-    <height>885</height>
+    <width>1440</width>
+    <height>900</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -257,6 +257,9 @@ border: 1px solid #ccc;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -340,7 +343,7 @@ background: rgba(255, 250, 250, 0.9);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1346</width>
+     <width>1440</width>
      <height>21</height>
     </rect>
    </property>

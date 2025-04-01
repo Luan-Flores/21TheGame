@@ -14,7 +14,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(1346, 885)
+        MainWindow.resize(1440, 900)
         MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
@@ -124,6 +124,7 @@ class Ui_MainWindow(object):
         self.lineEditEmail.setText("")
         self.lineEditEmail.setObjectName("lineEditEmail")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
+        self.label_3.setEnabled(True)
         self.label_3.setGeometry(QtCore.QRect(0, 0, 1440, 900))
         self.label_3.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
         self.label_3.setStyleSheet("")
@@ -161,7 +162,7 @@ class Ui_MainWindow(object):
         self.pushButtonEnviar.raise_()
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1346, 21))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1440, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(MainWindow)

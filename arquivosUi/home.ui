@@ -107,7 +107,7 @@ border-radius:20px;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>680</y>
+      <y>660</y>
       <width>341</width>
       <height>61</height>
      </rect>
@@ -133,6 +133,38 @@ border-radius:20px;</string>
     </property>
     <property name="text">
      <string>Como jogar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButtonCadastrar">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>730</y>
+      <width>341</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Consolas</family>
+      <pointsize>30</pointsize>
+      <weight>75</weight>
+      <italic>false</italic>
+      <bold>true</bold>
+      <strikeout>false</strikeout>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color:#0ba4eb;
+color:#ffffff;
+border-radius:20px;</string>
+    </property>
+    <property name="text">
+     <string>Cadastrar</string>
     </property>
    </widget>
   </widget>
