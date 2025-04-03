@@ -53,6 +53,7 @@ class Blackjack(QMainWindow):
         valor = 0
         ases = 0
         for carta in mao:
+            print(carta, " DINHEIRO PARA GASTAR")
             if carta[0] in ['Valete', 'Dama', 'Rei']:
                 valor += 10
             elif carta[0] == 'As':
@@ -81,11 +82,13 @@ class Blackjack(QMainWindow):
         self.mao_dealer = [self.baralho.pop(), self.baralho.pop()]
         
         self.exibir_mao()
+        # Atualiza a imagem da carta comprada
+        for i in range(len(self.mao_jogador)):
+            # Garante que o índice não ultrapasse o número de cartas disponíveis
+            if i < len(self.cartasArray):
+                local = f'labelCarta{i + 1}'  # labelCarta1, labelCarta2, etc.
+                self.addImgCarta(self.getFirstLetter(self.mao_jogador[i]), local)
 
-    def addImgCarta(self, carta, local):
-        caminho_imagem = f"../baralhos/{carta}.png"
-        # Usa getattr para acessar o atributo dinamicamente
-        getattr(self.ui, local).setPixmap(QPixmap(caminho_imagem))
 
     def clearResult(self):
         caminho_imagem = f"../baralhos/cartaFUNDO.png"
@@ -101,13 +104,19 @@ class Blackjack(QMainWindow):
             print(f"Carta: {carta} \n Label: {label}")
 
         self.zerarCounter()
-            
-            
+
+    def addImgCarta(self, carta, local):
+        caminho_imagem = f"../baralhos/{carta}.png"
+        # Usa getattr para acessar o atributo dinamicamente
+        getattr(self.ui, local).setPixmap(QPixmap(caminho_imagem))
 
     def getFirstLetter(self, carta):
         valor = str(carta[0][0])
         naipe = str(carta[1][0])
+        if valor == '1':
+            valor = 'T'
         cartaFull = str(valor + naipe)
+        print("GET FIRST", cartaFull)
         return cartaFull
     
     def zerarCounter(self):
@@ -119,12 +128,12 @@ class Blackjack(QMainWindow):
         valor = self.calcular_valor_mao(self.mao_jogador)
         self.ui.label_14.setText(str(valor))
         
-
         # Atualiza a imagem da carta comprada
         for i in range(len(self.mao_jogador)):
             # Garante que o índice não ultrapasse o número de cartas disponíveis
             if i < len(self.cartasArray):
                 local = f'labelCarta{i + 1}'  # labelCarta1, labelCarta2, etc.
+                print(self.mao_jogador[i], " MOVIMENTAÇAO AII TOFRACO")    
                 self.addImgCarta(self.getFirstLetter(self.mao_jogador[i]), local)
 
         print(f"AAAAAAA {self.mao_jogador}")
@@ -137,6 +146,7 @@ class Blackjack(QMainWindow):
         else:
             self.exibir_mao()
         self.vitorias = 0
+
     def parar(self):
         while self.calcular_valor_mao(self.mao_dealer) < 17:
             self.mao_dealer.append(self.baralho.pop())
