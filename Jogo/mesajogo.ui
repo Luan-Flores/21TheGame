@@ -296,7 +296,7 @@ border-radius:20px;</string>
      <string notr="true">color:#ffffff;</string>
     </property>
     <property name="text">
-     <string>Resultado da soma aqui</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="label_15">

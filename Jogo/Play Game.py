@@ -69,6 +69,7 @@ class Blackjack(QMainWindow):
         self.carta6 = self.ui.labelCarta6
         self.carta7 = self.ui.labelCarta7
         self.cartasArray = ['self.carta1', 'self.carta2', 'self.carta3', 'self.carta4', 'self.carta5', 'self.carta6', 'self.carta7']
+        self.vitorias = 0
 
         
 
@@ -204,7 +205,7 @@ class Blackjack(QMainWindow):
             self.iniciar_jogo()
         else:
             self.exibir_mao()
-        self.vitorias = 0
+        
     def parar(self):
         while self.calcular_valor_mao(self.mao_dealer) < 17:
             self.mao_dealer.append(self.baralho.pop())
