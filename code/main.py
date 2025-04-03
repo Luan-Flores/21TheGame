@@ -21,8 +21,6 @@ class Blackjack(QMainWindow):
         self.carta7 = self.ui.labelCarta7
         self.cartasArray = ['self.carta1', 'self.carta2', 'self.carta3', 'self.carta4', 'self.carta5', 'self.carta6', 'self.carta7']
 
-        self.ui.label_15.setText(("Resultado do seu score"))
-
 
         self.baralho = self.criar_baralho()
         self.mao_jogador = []
@@ -101,7 +99,7 @@ class Blackjack(QMainWindow):
             print(local)
             label = getattr(self.ui, local, "Exceptionnnn").setPixmap(QPixmap(caminho_imagem))
             print(f"Carta: {carta} \n Label: {label}")
-            
+
         self.zerarCounter()
             
             
@@ -120,7 +118,7 @@ class Blackjack(QMainWindow):
         self.mao_jogador.append(carta_comprada)
         valor = self.calcular_valor_mao(self.mao_jogador)
         self.ui.label_14.setText(str(valor))
-
+        
 
         # Atualiza a imagem da carta comprada
         for i in range(len(self.mao_jogador)):
@@ -138,7 +136,7 @@ class Blackjack(QMainWindow):
             self.iniciar_jogo()
         else:
             self.exibir_mao()
-
+        self.vitorias = 0
     def parar(self):
         while self.calcular_valor_mao(self.mao_dealer) < 17:
             self.mao_dealer.append(self.baralho.pop())
@@ -148,6 +146,8 @@ class Blackjack(QMainWindow):
 
         if valor_dealer > 21 or valor_jogador > valor_dealer:
             QMessageBox.information(self, 'Resultado', 'Você ganhou!')
+            self.vitorias += 1
+            self.ui.label_15.setText(str(self.vitorias))
             self.clearResult()
         elif valor_jogador < valor_dealer:
             QMessageBox.information(self, 'Resultado', 'O dealer ganhou!')
