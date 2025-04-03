@@ -154,7 +154,7 @@ class Ui_MainWindow(object):
         self.label_14 = QtWidgets.QLabel(self.centralwidget)
         self.label_14.setGeometry(QtCore.QRect(350, 730, 261, 41))
         font = QtGui.QFont()
-        font.setPointSize(17)
+        font.setPointSize(23)
         self.label_14.setFont(font)
         self.label_14.setStyleSheet("color:#ffffff;")
         self.label_14.setObjectName("label_14")

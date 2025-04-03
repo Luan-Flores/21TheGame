@@ -21,6 +21,8 @@ class Blackjack(QMainWindow):
         self.carta7 = self.ui.labelCarta7
         self.cartasArray = ['self.carta1', 'self.carta2', 'self.carta3', 'self.carta4', 'self.carta5', 'self.carta6', 'self.carta7']
 
+        self.ui.label_15.setText(("Resultado do seu score"))
+
 
         self.baralho = self.criar_baralho()
         self.mao_jogador = []
@@ -70,8 +72,8 @@ class Blackjack(QMainWindow):
     def exibir_mao(self):
         mao_jogador_str = ', '.join([f"{valor} de {naipe}" for valor, naipe in self.mao_jogador])
         mao_dealer_str = ', '.join([f"{valor} de {naipe}" for valor, naipe in self.mao_dealer])
-        self.ui.labelJogador.setText(f'Mão do Jogador: {mao_jogador_str} (Valor: {self.calcular_valor_mao(self.mao_jogador)})')
-        self.ui.labelDealer.setText(f'Mão do Dealer: {mao_dealer_str} (Valor: {self.calcular_valor_mao(self.mao_dealer)})')
+        # self.ui.labelJogador.setText(f'Mão do Jogador: {mao_jogador_str} (Valor: {self.calcular_valor_mao(self.mao_jogador)})')
+        # self.ui.labelDealer.setText(f'Mão do Dealer: {mao_dealer_str} (Valor: {self.calcular_valor_mao(self.mao_dealer)})')
 
     def iniciar_jogo(self):
         if len(self.baralho) < 4:
@@ -89,25 +91,36 @@ class Blackjack(QMainWindow):
 
     def clearResult(self):
         caminho_imagem = f"../baralhos/cartaFUNDO.png"
+        i=0
         # Usa getattr para acessar o atributo dinamicamente
         for carta in self.cartasArray:
+            print(i)
+            i+=1
             # Aqui, carta deve ser uma string
-            label = getattr(self.ui, carta)  # Acessa o QLabel
-            if isinstance(label, QLabel):  # Verifica se é um QLabel
-                label.setPixmap(QPixmap(caminho_imagem))
-            else:
-                print(f"Erro: {carta} não é um QLabel.")
-            print(carta)
+            local = f'labelCarta{i}'
+            print(local)
+            label = getattr(self.ui, local, "Exceptionnnn").setPixmap(QPixmap(caminho_imagem))
+            print(f"Carta: {carta} \n Label: {label}")
+            
+        self.zerarCounter()
+            
+            
 
     def getFirstLetter(self, carta):
         valor = str(carta[0][0])
         naipe = str(carta[1][0])
         cartaFull = str(valor + naipe)
         return cartaFull
+    
+    def zerarCounter(self):
+        self.ui.label_14.setText("0")
 
     def comprar(self):
         carta_comprada = self.baralho.pop()
         self.mao_jogador.append(carta_comprada)
+        valor = self.calcular_valor_mao(self.mao_jogador)
+        self.ui.label_14.setText(str(valor))
+
 
         # Atualiza a imagem da carta comprada
         for i in range(len(self.mao_jogador)):
@@ -135,10 +148,13 @@ class Blackjack(QMainWindow):
 
         if valor_dealer > 21 or valor_jogador > valor_dealer:
             QMessageBox.information(self, 'Resultado', 'Você ganhou!')
+            self.clearResult()
         elif valor_jogador < valor_dealer:
             QMessageBox.information(self, 'Resultado', 'O dealer ganhou!')
+            self.clearResult()
         else:
             QMessageBox.information(self, 'Resultado', 'Empate!')
+            self.clearResult()
         
         self.iniciar_jogo()
 
