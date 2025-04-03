@@ -25,6 +25,7 @@ class Blackjack(QMainWindow):
         self.baralho = self.criar_baralho()
         self.mao_jogador = []
         self.mao_dealer = []
+        self.vitorias = 0
         self.iniciar_jogo()
 
         self.ui.btnComprar.clicked.connect(self.comprar)
@@ -145,7 +146,7 @@ class Blackjack(QMainWindow):
             self.iniciar_jogo()
         else:
             self.exibir_mao()
-        self.vitorias = 0
+
 
     def parar(self):
         while self.calcular_valor_mao(self.mao_dealer) < 17:
